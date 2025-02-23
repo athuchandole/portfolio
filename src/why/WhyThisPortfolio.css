@@ -1,11 +1,6 @@
-/* src/App.css */
+/* src/why/WhyThisPortfolio.css */
 body {
   background-color: #232223;
-  font-family: 'Roboto', sans-serif;
-}
-
-h1 {
-  font-family: 'Google Sans', 'Roboto', sans-serif;
 }
 
 .projectfont1 {
@@ -22,4 +17,23 @@ h1 {
   font-size: 12px;
   line-height: 16px;
   color: #5f6368;
+}
+
+.pbg {
+  background-color: #2b2a2b;
+  padding: 2%;
+  border-radius: 8px;
+  color: white;
+  margin-top: 10px;
+}
+
+.projectimg {
+  width: 180px;
+  height: 180px;
+  background-size: cover;
+  border-radius: 50px;
+}
+
+.pbgbody {
+  padding: 3%;
 }
