@@ -1,0 +1,94 @@
+.mentors-container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.mentors-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #f4a949;
+}
+
+.mentors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.mentor-card {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.mentor-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.mentor-info {
+  background: black;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.mentors-carousel {
+  display: none;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-card {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.carousel-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.carousel-btn {
+  background: black;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Tablet View (2 cards per row) */
+@media (max-width: 992px) {
+  .mentors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile View (Carousel) */
+@media (max-width: 600px) {
+  .mentors-grid {
+    display: none;
+  }
+
+  .mentors-carousel {
+    display: flex;
+  }
+}

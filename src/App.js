@@ -5,6 +5,7 @@ import WhyThisPortfolio from './why/WhyThisPortfolio';
 import Alert from './Alert/Alert';
 import FAQs from './faqs/FAQs';
 import TabsAndPills from "./tabandpills/TabsAndPills";
+import Mentors from "./Mentors/Mentors";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <Alert />
       <WhyThisPortfolio />
        <TabsAndPills />
+       <Mentors />
     <FAQs />
     </div>
   );
