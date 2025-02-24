@@ -1,22 +1,48 @@
 /* src/why/WhyThisPortfolio.css */
+
 body {
   background-color: #232223;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.projectfont1 {
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 28px;
-  color: #202124;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.projectfont2 {
-  font-family: Roboto, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  color: #5f6368;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 0 15px;
+}
+
+.col-text {
+  flex: 2;
+  padding: 20px;
+}
+
+.portfolio-img {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+h1 {
+  color: #17a2b8;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .pbg {
@@ -27,13 +53,29 @@ body {
   margin-top: 10px;
 }
 
-.projectimg {
-  width: 180px;
-  height: 180px;
-  background-size: cover;
-  border-radius: 50px;
+.pbg i {
+  margin-right: 10px;
 }
 
-.pbgbody {
-  padding: 3%;
+.text-info {
+  color: #17a2b8;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col-image {
+    margin-bottom: 20px;
+  }
+
+  .col-text {
+    padding: 10px;
+  }
 }
