@@ -1,0 +1,64 @@
+.tabs-container {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: white;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+
+.tab-button {
+  background: #222;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.tab-button.active {
+  background: yellow;
+  color: black;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  justify-content: center;
+}
+
+.content-card {
+  background: #222;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.content-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .tabs {
+    grid-template-columns: repeat(2, 1fr); /* Show 2 tabs per row */
+  }
+
+  .content-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 column for small screens */
+  }
+}
