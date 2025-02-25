@@ -10,7 +10,7 @@ import Mentors from "./Mentors/Mentors";
 function App() {
   return (
     <div className="App">
-    <Alert />
+    {/* <Alert /> */}
       <WhyThisPortfolio />
        <TabsAndPills />
        <Mentors />
