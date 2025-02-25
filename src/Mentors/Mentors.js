@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import "./Mentors.css";
+import img1 from "./MyAI/ai1.jpg";
+import img2 from "./MyAI/ai7.jpg";
+import img3 from "./MyAI/ai3.jpg";
+import img4 from "./MyAI/ai4.jpg";
+import img5 from "./MyAI/ai5.jpg";
+import img6 from "./MyAI/ai6.jpg";
+
 
 const mentors = [
-  { name: "Salil Jamdar", title: "Actor | Writer | Singer", img: "mentor1.jpg", bg: "#f4a949" },
-  { name: "Manish Pandey", title: "Chief Executive Officer", img: "mentor2.jpg", bg: "#6eb3d0" },
-  { name: "Nachiket Nisal", title: "Chief Operating Officer", img: "mentor3.jpg", bg: "#f5b37f" },
-  { name: "Akshat Tiwari", title: "Head Video Editor", img: "mentor4.jpg", bg: "#40d1b0" },
-  { name: "Rajas Pardeshi", title: "Head of Production", img: "mentor5.jpg", bg: "#e74c3c" },
-  { name: "Mahima Thakar", title: "Head of Content", img: "mentor6.jpg", bg: "#f8a5c2" },
+  { name: "Salil Jamdar", title: "Actor | Writer | Singer", img: img1, bg: "#f4a949" },
+  { name: "Manish Pandey", title: "Chief Executive Officer", img: img2, bg: "#6eb3d0" },
+  { name: "Nachiket Nisal", title: "Chief Operating Officer", img: img3, bg: "#f5b37f" },
+  { name: "Akshat Tiwari", title: "Head Video Editor", img: img4, bg: "#40d1b0" },
+  { name: "Rajas Pardeshi", title: "Head of Production", img: img5, bg: "#e74c3c" },
+  { name: "Mahima Thakar", title: "Head of Content", img: img6, bg: "#f8a5c2" },
 ];
 
 const Mentors = () => {
