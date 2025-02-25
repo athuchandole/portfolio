@@ -1,5 +1,3 @@
-/* src/why/WhyThisPortfolio.css */
-
 body {
   background-color: #232223;
   margin: 0;
@@ -57,9 +55,9 @@ h1 {
   margin-right: 10px;
 }
 
-/* .text-info {
+.text-info {
   color: #ffff00;
-} */
+}
 
 .text-uppercase {
   text-transform: uppercase;

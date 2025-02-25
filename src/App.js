@@ -2,11 +2,11 @@
 import React from 'react';
 import './App.css';
 import WhyThisPortfolio from './why/WhyThisPortfolio';
-import Alert from './Alert/Alert';
+// import Alert from './Alert/Alert';
 import FAQs from './faqs/FAQs';
 import TabsAndPills from "./tabandpills/TabsAndPills";
-import Mentors from "./Mentors/Mentors";
-import Myself from "./Myself/Myself"
+// import Mentors from "./Mentors/Mentors";
+// import Myself from "./Myself/Myself"
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
 {/* <Myself/> */}
       <WhyThisPortfolio />
        <TabsAndPills />
-       <Mentors />
+       {/* <Mentors /> */}
     <FAQs />
     </div>
   );
