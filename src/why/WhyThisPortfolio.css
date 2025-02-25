@@ -40,7 +40,7 @@ body {
 }
 
 h1 {
-  color: #17a2b8;
+  color: #facc15;
   font-size: 2rem;
   margin-bottom: 20px;
 }
@@ -57,9 +57,9 @@ h1 {
   margin-right: 10px;
 }
 
-.text-info {
-  color: #17a2b8;
-}
+/* .text-info {
+  color: #ffff00;
+} */
 
 .text-uppercase {
   text-transform: uppercase;
