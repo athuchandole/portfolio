@@ -1,0 +1,60 @@
+.compo2-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0d4d4d;
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    .compo2-container {
+      flex-direction: row;
+      text-align: left;
+    }
+  }
+  
+  .compo2-content {
+    max-width: 50%;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .highlight {
+    color: #f6b100;
+  }
+  
+  .compo2-description {
+    margin: 20px 0;
+    font-size: 1rem;
+  }
+  
+  .compo2-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .compo2-playstore img,
+  .compo2-appstore img {
+    width: 150px;
+    cursor: pointer;
+  }
+  
+  .compo2-mobile-ui {
+    max-width: 45%;
+    margin-top: 20px;
+  }
+  
+  .compo2-mobile-image {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
