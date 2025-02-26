@@ -18,7 +18,7 @@ const WhyThisPortfolio = () => {
         
         {/* Text Content Section */}
         <div className="col-text">
-          <h1 className="p-2">Why This Portfolio?</h1>
+          <h1 className="why_title p-2">Why This Portfolio?</h1>
           <div className="pbg">
             <i className="fa fa-check-circle text-info"></i>
             To <strong className="text-uppercase"> SHOWCASE </strong> expertise and skills.

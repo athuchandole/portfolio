@@ -37,7 +37,7 @@ body {
   overflow: hidden;
 }
 
-h1 {
+.why_title{
   color: #facc15;
   font-size: 2rem;
   margin-bottom: 20px;
