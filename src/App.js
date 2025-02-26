@@ -7,6 +7,8 @@ import FAQs from './faqs/FAQs';
 import TabsAndPills from "./tabandpills/TabsAndPills";
 // import Mentors from "./Mentors/Mentors";
 // import Myself from "./Myself/Myself"
+import StupidBox from "./stupidbox/StupidBox";
+
 
 function App() {
   return (
@@ -14,9 +16,11 @@ function App() {
     {/* <Alert /> */}
 {/* <Myself/> */}
       <WhyThisPortfolio />
+      
        <TabsAndPills />
        {/* <Mentors /> */}
     <FAQs />
+    <StupidBox/>
     </div>
   );
 }
