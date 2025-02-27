@@ -1,0 +1,132 @@
+.footer-container {
+  text-align: center;
+  background: rgb(249, 206, 52);
+  background: linear-gradient(355deg, rgba(249, 206, 52, 1) 0%, rgba(238, 42, 123, 1) 48%, rgba(98, 40, 215, 1) 100%);
+  color: white;
+  padding: 50px 20px;
+}
+
+.footer-icon {
+  width: 250px; /* Adjusted size for smaller screens */
+  margin-bottom: 15px;
+}
+
+.footer-content h1 {
+  font-size: 48px; /* Adjusted for smaller screens */
+  font-weight: bold;
+  color: white;
+}
+
+.footer-content p {
+  font-size: 20px; /* Smaller font for better readability */
+  margin: 10px 0;
+}
+
+.vmail{
+  color: black;
+  text-decoration: none;
+}
+
+.social-buttons {
+  margin-top: 20px;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  padding: 10px 16px; /* Reduced padding */
+  margin: 8px;
+  border-radius: 30px;
+  font-size: 25px; /* Smaller font size */
+  font-weight: bold;
+  /* color: black; */
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.instagram {
+  color: #e1306c;
+}
+
+.youtube {
+  color: #ff0000;
+}
+
+.linkedin {
+  color: #0077b5;
+}
+
+.social-btn:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 15px; /* Smaller font for footer text */
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    padding: 40px 20px;
+  }
+
+  .footer-icon {
+    width: 120px; /* Smaller icon size on smaller screens */
+  }
+
+  .footer-content h1 {
+    font-size: 28px; /* Smaller title on mobile */
+  }
+
+  .footer-content p {
+    font-size: 14px; /* Smaller description text */
+  }
+
+  .social-btn {
+    font-size: 16px; /* Adjust button font size */
+    padding: 8px 14px; /* Adjust button padding */
+  }
+
+  footer {
+    font-size: 12px; /* Adjust footer text size */
+  }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-icon {
+        width: 200px;
+        /* margin-bottom: 15px; */
+      }
+  .footer-container {
+    padding: 30px 15px; /* Adjust padding for small screens */
+  }
+
+  .footer-content h1 {
+    font-size: 24px; /* Even smaller title on very small screens */
+  }
+
+  .footer-content p {
+    font-size: 16px; /* Even smaller description text */
+  }
+
+  .footer-content a {
+    font-size: 18px; /* Adjust email link font size */
+  }
+
+  .social-btn {
+    font-size: 14px; /* Even smaller button font size */
+    padding: 6px 12px; /* Smaller padding */
+  }
+
+  footer {
+    font-size: 12px; /* Smaller footer text */
+  }
+}
