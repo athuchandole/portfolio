@@ -17,11 +17,11 @@ function App() {
     {/* <Alert /> */}
 {/* <Myself/> */}
       <WhyThisPortfolio />
+      <StupidBox/>
       {/* <Compo2 /> */}
        <TabsAndPills />
        {/* <Mentors /> */}
     <FAQs />
-    <StupidBox/>
     </div>
   );
 }
