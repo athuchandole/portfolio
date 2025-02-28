@@ -1,9 +1,10 @@
-// src/App.js
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
+
 // import Hero from './Hero/Hero';
 import WhyThisPortfolio from './why/WhyThisPortfolio';
-// import Alert from './Alert/Alert';
+import Alert from './Alert/Alert';
 import FAQs from './faqs/FAQs';
 import TabsAndPills from "./tabandpills/TabsAndPills";
 import Youtubetwo from "./Youtubetwo/yt2";
@@ -14,24 +15,29 @@ import StupidBox from "./stupidbox/StupidBox";
 // import Books from './books/Books';
 
 import Footer from "./Footer/footer";
-
+import Art from "./art/art";
 
 function App() {
   return (
-    <div className="App">
-      {/* <Hero /> */}
-    {/* <Alert /> */}
-{/* <Myself/> */}
-      <WhyThisPortfolio />
-      {/* <Books/> */}
-      <StupidBox/>
-      {/* <Compo2 /> */}
-       <TabsAndPills />
-       <Youtubetwo/>
-       {/* <Mentors /> */}
-    <FAQs />
-    <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        {/* <Hero /> */}
+        {/* <Alert /> */}
+        {/*<Myself/> */}
+        <WhyThisPortfolio />
+        {/* <Books/> */}
+        <StupidBox />
+        {/* <Compo2 /> */}
+        <TabsAndPills />
+        <Youtubetwo />
+        {/* <Mentors /> */}
+        <FAQs />
+        <Footer />
+        <Routes>
+          <Route path="/arts" element={<Art />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
