@@ -3,7 +3,7 @@
   padding: 30px;
   background: #342e2e;
   color: white;
-  background-image: url(img/bg1.png);
+  background-image: url(../assets/bg/bg1.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -49,11 +49,30 @@ h2 {
   background: #222;
   padding: 10px;
   border-radius: 10px;
+  border: 1px solid yellow;
+  /* animation: blink 2s infinite; */
 }
 
 .content-card img {
   width: 100%;
   border-radius: 10px;
+}
+.content-card p {
+  font-size: 1rem;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+@keyframes blink {
+  0% {
+    box-shadow: 3px 3px 10px yellow;
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 3px 3px 10px yellow;
+  }
 }
 
 @media (max-width: 600px) {
@@ -65,3 +84,5 @@ h2 {
     grid-template-columns: repeat(1, 1fr); /* 1 column for small screens */
   }
 }
+
+

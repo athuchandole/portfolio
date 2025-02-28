@@ -1,0 +1,68 @@
+.yt2-tabs-container {
+    text-align: center;
+    padding: 30px;
+    background: #342e2e;
+    color: white;
+    background-image: url(../assets/bg/bg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .yt2-tabs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto 20px;
+  }
+  
+  .yt2-tab-button {
+    background: #222;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+  
+  .yt2-tab-button.active {
+    background: yellow;
+    color: black;
+  }
+  
+  .yt2-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .yt2-content-card {
+    background: #222;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .yt2-content-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 600px) {
+    .yt2-tabs {
+      grid-template-columns: repeat(2, 1fr); /* Show 2 tabs per row */
+    }
+  
+    .yt2-content-grid {
+      grid-template-columns: repeat(1, 1fr); /* 1 column for small screens */
+    }
+  }
+  
