@@ -10,6 +10,7 @@ import TabsAndPills from "./tabandpills/TabsAndPills";
 // import Myself from "./Myself/Myself"
 import StupidBox from "./stupidbox/StupidBox";
 // import Compo2 from "./compo2/Compo2";
+import Books from './books/Books';
 
 import Footer from "./Footer/footer";
 
@@ -21,6 +22,7 @@ function App() {
     {/* <Alert /> */}
 {/* <Myself/> */}
       <WhyThisPortfolio />
+      <Books/>
       <StupidBox/>
       {/* <Compo2 /> */}
        <TabsAndPills />
