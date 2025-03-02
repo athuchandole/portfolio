@@ -1,0 +1,37 @@
+/* src/art/InstagramEmbed.css */
+
+/* Instagram Embed Container: Flexbox layout */
+.instagram-embed-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 16px; /* Space between posts */
+    justify-content: center; /* Center the posts */
+  }
+  
+  /* Instagram Embed Styling for each post */
+  .instagram-embed {
+    max-width: 100%; /* Ensure it is flexible */
+    box-sizing: border-box; /* Include padding/border in the width calculation */
+  }
+  
+  /* For screens larger than 1200px (PC) */
+  @media (min-width: 1200px) {
+    .instagram-embed {
+      flex: 1 0 18%; /* 5 posts per row */
+    }
+  }
+  
+  /* For screens between 768px and 1199px (Tablet) */
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .instagram-embed {
+      flex: 1 0 30%; /* 3 posts per row */
+    }
+  }
+  
+  /* For screens smaller than 768px (Phone) */
+  @media (max-width: 767px) {
+    .instagram-embed {
+      flex: 1 0 90%; /* 1 post per row */
+    }
+  }
+  
