@@ -1,44 +1,56 @@
-.carousel-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%; /* Use full width */
-    overflow: hidden;
+/* src/book/Books.css */
+.books-carousel {
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.slick-slide {
+  padding: 0 10px;
+}
+
+.slick-prev,
+.slick-next {
+  background-color: #000;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  z-index: 1;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .card h3 {
+    font-size: 14px;
   }
-  
-  .carousel {
-    display: flex;
-    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .card h3 {
+    font-size: 12px;
   }
-  
-  .carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Smooth transition */
-  }
-  
-  .carousel-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 10px;
-    width: auto; /* Set the width of each item to auto */
-  }
-  
-  .carousel-item img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-  }
-  
-  .carousel-item p {
-    margin-top: 8px;
-    font-size: 16px;
-    text-align: center;
-  }
-  
-  .scroll-button {
-    display: none; /* Removed the scroll buttons */
-  }
-  
+}

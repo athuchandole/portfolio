@@ -1,0 +1,179 @@
+@keyframes infiniteLoop {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(calc(-100px * 10), 0, 0);
+    }
+}
+
+section {
+    background: wheat;
+}
+
+.brandsCarousel {
+    max-width: 960px;
+    max-height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    /* border: 2px solid yellow; */
+}
+
+.brandsCarousel::before,
+.brandsCarousel::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to right, rgba(250, 250, 240, 1) 0%, rgba(250, 250, 240, 0) 100%);
+    position: absolute;
+    z-index: 2;
+}
+
+.brandsCarousel::before {
+    top: 0;
+    left: 0;
+}
+
+.brandsCarousel::after {
+    top: 0;
+    right: 0;
+    transform: rotateZ(180deg);
+}
+
+.carouselTrack {
+    width: calc(100px * 20);
+    animation: infiniteLoop 10s linear infinite;
+    animation-fill-mode: forwards;
+    will-change: transform;
+}
+
+.brandLogo {
+    width: 100px;
+    height: 50px;
+    align-items: center;
+    margin: auto;
+    overflow: hidden;
+}
+
+.brandLogo img {
+    width: 100px;
+    height: 50px;
+    object-fit: contain;
+}
+
+@keyframes beat {
+    to {
+        transform: scale(1.2);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #0096ff;
+    position: relative;
+}
+
+a::after {
+    content: "";
+    width: 0;
+    height: 0.125rem;
+    left: 0;
+    bottom: 0;
+    transition: width .4s ease;
+    background: #0096ff;
+    position: absolute;
+}
+
+a:hover::after {
+    width: 100%;
+}
+@keyframes infiniteLoop {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(calc(-100px * 10), 0, 0);
+    }
+}
+
+section {
+    background: #fafaf0;
+}
+
+.brandsCarousel {
+    max-width: 960px;
+    max-height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.brandsCarousel::before,
+.brandsCarousel::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to right, rgba(250, 250, 240, 1) 0%, rgba(250, 250, 240, 0) 100%);
+    position: absolute;
+    z-index: 2;
+}
+
+.brandsCarousel::before {
+    top: 0;
+    left: 0;
+}
+
+.brandsCarousel::after {
+    top: 0;
+    right: 0;
+    transform: rotateZ(180deg);
+}
+
+.carouselTrack {
+    width: calc(100px * 20);
+    animation: infiniteLoop 10s linear infinite;
+    animation-fill-mode: forwards;
+    will-change: transform;
+}
+
+.brandLogo {
+    width: 100px;
+    height: 50px;
+    align-items: center;
+    margin: auto;
+    overflow: hidden;
+}
+
+.brandLogo img {
+    width: 100px;
+    height: 50px;
+    object-fit: contain;
+}
+
+@keyframes beat {
+    to {
+        transform: scale(1.2);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #0096ff;
+    position: relative;
+}
+
+a::after {
+    content: "";
+    width: 0;
+    height: 0.125rem;
+    left: 0;
+    bottom: 0;
+    transition: width .4s ease;
+    background: #0096ff;
+    position: absolute;
+}
+
+a:hover::after {
+    width: 100%;
+}
