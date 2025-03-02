@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import './App.css';
 
-// import Hero from './Hero/Hero';
+import Hero from './Hero/Hero';
 import WhyThisPortfolio from './why/WhyThisPortfolio';
 import Alert from './Alert/Alert';
 import FAQs from './faqs/FAQs';
@@ -25,7 +25,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* <Hero /> */}
+        <Hero />
         {/* <Alert /> */}
         {/*<Myself/> */}
         <WhyThisPortfolio />
