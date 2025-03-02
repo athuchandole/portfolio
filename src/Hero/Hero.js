@@ -7,10 +7,11 @@ const Hero = () => {
     <div className="hero-main">
     <div className="hero">
       <div className="hero-content">
-        <p className="hero-mission">KNOW ABOUT Mentors</p>
+        <p className="hero-mission">KNOW ABOUT Me</p>
         <h1>
           Hye there... I'm <br /> Atharv Chandole <br /> a
-          <span className="highlight"> Web Developer </span>
+          <span className="highlight"> Web Developer</span> <br/>
+          Here is my <span className="highlight">Portfolio</span>
         </h1>
       </div>
       <div className="hero-image">

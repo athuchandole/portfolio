@@ -1,47 +1,47 @@
+// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import "slick-carousel/slick/slick.css"; 
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Routes and Route
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import './App.css';
 
+import Navbar from './nav/nav'; // Import Navbar
 import Hero from './Hero/Hero';
 import WhyThisPortfolio from './why/WhyThisPortfolio';
-import Alert from './Alert/Alert';
 import FAQs from './faqs/FAQs';
 import TabsAndPills from "./tabandpills/TabsAndPills";
 import Youtubetwo from "./Youtubetwo/yt2";
-// import Mentors from "./Mentors/Mentors";
-// import Myself from "./Myself/Myself"
-// import StupidBox from "./stupidbox/StupidBox";
-// import Compo2 from "./compo2/Compo2";
 import Books from './books/Books';
-import Brands from './brands/Brands'; 
-
+import Brands from './brands/Brands';
 import Footer from "./Footer/footer";
-import Art from "./art/art";
+import Hello from './hello/hello'; // Import Hello component
+import Art from './art/art';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Hero />
-        {/* <Alert /> */}
-        {/*<Myself/> */}
-        <WhyThisPortfolio />
-        <Books/>
-        {/* <StupidBox /> */}
-        {/* <Compo2 /> */}
-        <TabsAndPills />
-        <Youtubetwo />
-
-        {/* <Mentors /> */}
-        <Brands/>
-        <FAQs />
-        <Footer />
+        <Navbar /> {/* Add Navbar */}
         <Routes>
-          <Route path="/arts" element={<Art />} />
+          {/* Route for Hello component */}
+          <Route path="/hii" element={<Hello />} />
+          <Route path="/art" element={<Art />} /> 
+          
+          {/* Default Route (everything else goes here) */}
+          <Route path="/" element={
+            <>
+              <Hero />
+              <WhyThisPortfolio />
+              <Books />
+              <TabsAndPills />
+              <Youtubetwo />
+              <Brands />
+              <FAQs />
+            </>
+          } />
         </Routes>
+        
+        <Footer />
       </div>
     </Router>
   );

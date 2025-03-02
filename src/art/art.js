@@ -1,5 +1,5 @@
 import React from "react";
-import "./art.css";
+// import "./art.css";
 import { Link } from "react-router-dom";
 import { Heart, MessageCircle, Bookmark } from "lucide-react";
 
