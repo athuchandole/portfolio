@@ -8,11 +8,12 @@ import './App.css';
 import Navbar from './nav/nav'; // Import Navbar
 import Hero from './Hero/Hero';
 import WhyThisPortfolio from './why/WhyThisPortfolio';
+import Heighlights from './Heighlights/PortfolioHighlights'
 import FAQs from './faqs/FAQs';
 import TabsAndPills from "./tabandpills/TabsAndPills";
 import Youtubetwo from "./Youtubetwo/yt2";
 import Books from './books/Books';
-import Brands from './brands/Brands';
+// import Brands from './brands/Brands';
 import Footer from "./Footer/footer";
 import Hello from './hello/hello'; // Import Hello component
 import Art from './art/art';
@@ -32,10 +33,11 @@ function App() {
             <>
               <Hero />
               <WhyThisPortfolio />
+              <Heighlights/>
               <Books />
               <TabsAndPills />
               <Youtubetwo />
-              <Brands />
+              {/* <Brands /> */}
               <FAQs />
             </>
           } />

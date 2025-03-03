@@ -1,0 +1,98 @@
+/* Main Container */
+.portfolio-container {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Title Styling */
+  .portfolio-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #facc15;
+  }
+  
+  .portfolio-title span {
+    color: green;
+  }
+  
+  /* Grid Layout */
+  .highlights-grid {
+    display: grid;
+    gap: 20px;
+  }
+  
+  /* Card Styling */
+  .highlight-card {
+    background: rgba(0, 0, 0, 0.225);
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #facc15;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .highlight-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Icon */
+  .highlight-icon {
+    font-size: 35px;
+    margin-bottom: 5px;
+  }
+  
+  /* Card Title */
+  .highlight-title {
+    color: #facc15;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Description */
+  .highlight-description {
+    font-size: 20px;
+    color: #555;
+  }
+  
+  /* CTA Button */
+  .cta-button {
+    margin-top: 20px;
+    background: green;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .cta-button:hover {
+    background: darkgreen;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 1024px) {
+    .highlights-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 600px) and (max-width: 1023px) {
+    .highlights-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 599px) {
+    .highlights-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
