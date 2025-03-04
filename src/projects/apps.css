@@ -1,0 +1,175 @@
+
+.project-apps-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  /* background-color: #f4f4f4; */
+  /* min-height: 100vh; */
+}
+
+.app-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+  
+.page-title {
+  text-align: center;
+  color: #facc15;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+/* Grid Layout */
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* App Card */
+.app-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* App Header */
+.app-header {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+.app-icon {
+  font-size: 3rem;
+  margin-right: 15px;
+}
+
+.app-info {
+  flex-grow: 1;
+}
+
+.app-name {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.app-category {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* App Description */
+.app-description {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* App Footer */
+.app-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Star Rating */
+.stars {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.star {
+  font-size: 1.2rem;
+}
+
+.star.full {
+  color: #ffc107;
+}
+
+.star.half {
+  color: #ffc107;
+  position: relative;
+}
+
+.star.half::after {
+  content: '★';
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+  color: gray;
+}
+
+.star.empty {
+  color: #ddd;
+}
+
+.rating-text {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Button */
+.app-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.app-button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .apps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .apps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .apps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

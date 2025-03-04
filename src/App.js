@@ -14,6 +14,7 @@ import TabsAndPills from "./tabandpills/TabsAndPills";
 import Youtubetwo from "./Youtubetwo/yt2";
 import Books from './books/Books';
 // import Brands from './brands/Brands';
+import ProjectApps from './projects/apps';
 import Footer from "./Footer/footer";
 import Hello from './hello/hello'; // Import Hello component
 import Art from './art/art';
@@ -26,14 +27,15 @@ function App() {
         <Routes>
           {/* Route for Hello component */}
           <Route path="/hii" element={<Hello />} />
-          <Route path="/art" element={<Art />} /> 
-          
+          <Route path="/art" element={<Art />} />
+
           {/* Default Route (everything else goes here) */}
           <Route path="/" element={
             <>
               <Hero />
               <WhyThisPortfolio />
-              <Heighlights/>
+              <ProjectApps />
+              <Heighlights />
               <Books />
               <TabsAndPills />
               <Youtubetwo />
@@ -42,7 +44,7 @@ function App() {
             </>
           } />
         </Routes>
-        
+
         <Footer />
       </div>
     </Router>
