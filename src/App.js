@@ -12,6 +12,7 @@ import Heighlights from './Heighlights/PortfolioHighlights'
 import FAQs from './faqs/FAQs';
 import TabsAndPills from "./tabandpills/TabsAndPills";
 import Youtubetwo from "./Youtubetwo/yt2";
+import GoogleSearch from './google/google';
 import Books from './books/Books';
 // import Brands from './brands/Brands';
 import ProjectApps from './projects/apps';
@@ -51,6 +52,7 @@ function App() {
                 <TabsAndPills />
                 <Youtubetwo />
                 {/* <Brands /> */}
+                <GoogleSearch/>
                 <FAQs />
               </div>
             </>
