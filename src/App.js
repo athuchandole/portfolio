@@ -18,6 +18,8 @@ import ProjectApps from './projects/apps';
 import Footer from "./Footer/footer";
 import Hello from './hello/hello'; // Import Hello component
 import Art from './art/art';
+import Arthero from './art/arthero/arthero';
+
 
 function App() {
   return (
@@ -27,7 +29,12 @@ function App() {
         <Routes>
           {/* Route for Hello component */}
           <Route path="/hii" element={<Hello />} />
-          <Route path="/art" element={<Art />} />
+          <Route path="/art" element={
+            <>
+              <Arthero />
+              <Art />
+            </>
+          } />
 
           {/* Default Route (everything else goes here) */}
           <Route path="/" element={

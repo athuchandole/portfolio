@@ -1,0 +1,88 @@
+body{
+    /* background-color: greenyellow; */
+}
+
+.arthero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+}
+
+.arthero-text-section {
+    text-align: center;
+    max-width: 600px;
+}
+
+.arthero-badge {
+    background-color: #1e90ff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.arthero-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.arthero-highlight {
+    color: #28a745;
+}
+
+.arthero-description {
+    color: #555;
+}
+
+.arthero-join-button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 24px;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.arthero-join-button:hover {
+    background-color: #218838;
+}
+
+.arthero-image-section {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.arthero-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .arthero-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .arthero-text-section {
+        text-align: left;
+        max-width: 50%;
+    }
+
+    .arthero-image-section {
+        max-width: 50%;
+    }
+}

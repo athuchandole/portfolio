@@ -6,13 +6,13 @@ const App = () => {
   // Array of Instagram post URLs
   const postUrls = [
     'https://www.instagram.com/p/DESvwVEyvux/?igsh=MW0wbHcycTh6eTlwZw==',
-    'https://www.instagram.com/p/DESvwVEyvux/?igsh=MW0wbHcycTh6eTlwZw==',
-    'https://www.instagram.com/p/DESvwVEyvux/?igsh=MW0wbHcycTh6eTlwZw==',
-    'https://www.instagram.com/p/DESvwVEyvux/?igsh=MW0wbHcycTh6eTlwZw==',
-    'https://www.instagram.com/p/DESvwVEyvux/?igsh=MW0wbHcycTh6eTlwZw==',
-    'https://www.instagram.com/p/DESvwVEyvux/?igsh=MW0wbHcycTh6eTlwZw==',
-    'https://www.instagram.com/p/DESvwVEyvux/?igsh=MW0wbHcycTh6eTlwZw==',
-    'https://www.instagram.com/p/DESvwVEyvux/?igsh=MW0wbHcycTh6eTlwZw==',
+    // 'https://www.instagram.com/p/DESvwVEyvux/?igsh=MW0wbHcycTh6eTlwZw==',
+    // 'https://www.instagram.com/p/DESvwVEyvux/?igsh=MW0wbHcycTh6eTlwZw==',
+    // 'https://www.instagram.com/p/DESvwVEyvux/?igsh=MW0wbHcycTh6eTlwZw==',
+    // 'https://www.instagram.com/p/DESvwVEyvux/?igsh=MW0wbHcycTh6eTlwZw==',
+    // 'https://www.instagram.com/p/DESvwVEyvux/?igsh=MW0wbHcycTh6eTlwZw==',
+    // 'https://www.instagram.com/p/DESvwVEyvux/?igsh=MW0wbHcycTh6eTlwZw==',
+    // 'https://www.instagram.com/p/DESvwVEyvux/?igsh=MW0wbHcycTh6eTlwZw==',
   ];
 
   return (

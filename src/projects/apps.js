@@ -16,7 +16,8 @@ const ProjectApps = () => {
       icon: attendanceImg,
       category: 'In Java and xml',
       rating: 4.5,
-      downloads: '10K+'
+      downloads: '10K+',
+      buttonType: 'Install'  // Set button type for this project
     },
     {
       id: 2,
@@ -25,7 +26,8 @@ const ProjectApps = () => {
       icon: codeCraftImg,
       category: 'Development',
       rating: 4.7,
-      downloads: '50K+'
+      downloads: '50K+',
+      buttonType: 'View'  // Set button type for this project
     },
     {
       id: 3,
@@ -34,7 +36,8 @@ const ProjectApps = () => {
       icon: webSphereImg,
       category: 'Utilities',
       rating: 4.3,
-      downloads: '25K+'
+      downloads: '25K+',
+      buttonType: 'Download'  // Set button type for this project
     },
     {
       id: 4,
@@ -43,7 +46,8 @@ const ProjectApps = () => {
       icon: mobileSyncImg,
       category: 'Communication',
       rating: 4.6,
-      downloads: '15K+'
+      downloads: '15K+',
+      buttonType: 'Install'  // Set button type for this project
     }
   ];
 
@@ -56,7 +60,7 @@ const ProjectApps = () => {
         {[...Array(5)].map((_, index) => (
           <span 
             key={index} 
-            className={
+            className={ 
               index < fullStars ? 'star full' : 
               (halfStar && index === fullStars) ? 'star half' : 'star empty'
             }
@@ -97,7 +101,11 @@ const ProjectApps = () => {
                 </span>
               </div>
               
-              <button className="app-button">Install</button>
+              <button className="app-button">
+                {app.buttonType === 'Install' && 'Install'}
+                {app.buttonType === 'View' && 'View'}
+                {app.buttonType === 'Download' && 'Download'}
+              </button>
             </div>
           </div>
         ))}
