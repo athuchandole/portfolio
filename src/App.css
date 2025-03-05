@@ -1,7 +1,11 @@
 /* src/App.css */
-body {
+.homeroute{
   background-color: #232223;
   font-family: 'Roboto', sans-serif;
+}
+
+.artroute{
+  background-color: #f1f1f1
 }
 
 h1 {

@@ -1,6 +1,3 @@
-body{
-    /* background-color: greenyellow; */
-}
 
 .arthero-container {
     display: flex;
@@ -8,8 +5,8 @@ body{
     align-items: center;
     max-width: 1200px;
     margin: auto;
-    padding: 20px;
-    background-color: white;
+    padding: 40px;
+    background: url(../../assets/bg/box.png);
 }
 
 .arthero-text-section {
@@ -29,7 +26,7 @@ body{
 }
 
 .arthero-title {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     margin-bottom: 5px;
 }
@@ -64,6 +61,7 @@ body{
 }
 
 .arthero-image {
+    /* display: flex; */
     width: 100%;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -84,5 +82,9 @@ body{
 
     .arthero-image-section {
         max-width: 50%;
+    }
+    .arthero-title {
+        font-size: 40px;
+        font-weight: bold;
     }
 }

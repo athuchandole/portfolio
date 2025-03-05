@@ -31,25 +31,31 @@ function App() {
           <Route path="/hii" element={<Hello />} />
           <Route path="/art" element={
             <>
-              <Arthero />
-              <Art />
+              <div className='artroute'>
+                <Arthero />
+                <Art />
+              </div>
             </>
           } />
 
           {/* Default Route (everything else goes here) */}
+
           <Route path="/" element={
             <>
-              <Hero />
-              <WhyThisPortfolio />
-              <ProjectApps />
-              <Heighlights />
-              <Books />
-              <TabsAndPills />
-              <Youtubetwo />
-              {/* <Brands /> */}
-              <FAQs />
+              <div className='homeroute'>
+                <Hero />
+                <WhyThisPortfolio />
+                <ProjectApps />
+                <Heighlights />
+                <Books />
+                <TabsAndPills />
+                <Youtubetwo />
+                {/* <Brands /> */}
+                <FAQs />
+              </div>
             </>
           } />
+
         </Routes>
 
         <Footer />
