@@ -7,6 +7,7 @@ import './App.css';
 
 import Navbar from './nav/nav'; // Import Navbar
 import Hero from './Hero/Hero';
+import Alert from './Alert/Alert';
 import WhyThisPortfolio from './why/WhyThisPortfolio';
 import Heighlights from './Heighlights/PortfolioHighlights'
 import FAQs from './faqs/FAQs';
@@ -33,6 +34,7 @@ function App() {
           <Route path="/art" element={
             <>
               <div className='artroute'>
+                <Alert />
                 <Arthero />
                 <Art />
               </div>
@@ -44,6 +46,7 @@ function App() {
           <Route path="/" element={
             <>
               <div className='homeroute'>
+                <Alert />
                 <Hero />
                 <WhyThisPortfolio />
                 <ProjectApps />
@@ -52,7 +55,7 @@ function App() {
                 <TabsAndPills />
                 <Youtubetwo />
                 {/* <Brands /> */}
-                <GoogleSearch/>
+                <GoogleSearch />
                 <FAQs />
               </div>
             </>
