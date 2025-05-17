@@ -51,7 +51,7 @@ const Books = () => {
         {books.map((book) => (
           <div key={book.id} className="card">
             <img src={book.image} alt={book.title} />
-            <h3>{book.title}</h3>
+            {/* <h3>{book.title}</h3> */}
           </div>
         ))}
       </Slider>
