@@ -20,6 +20,7 @@ import ProjectApps from './projects/apps';
 import Footer from "./Footer/footer";
 import Art from './art/art';
 import Arthero from './art/arthero/arthero';
+import SocialMedia from './SocialMedia/SocialMedia';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
           <ProjectApps />
           <Heighlights />
           <Books />
+          <SocialMedia />
           <TabsAndPills />
           <Youtubetwo />
           {/* <Brands /> */}

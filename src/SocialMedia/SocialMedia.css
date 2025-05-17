@@ -1,0 +1,116 @@
+.media-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+    background-color: #111;
+}
+
+.media-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.media-subtitle {
+    font-size: 1rem;
+    color: #999;
+    margin-bottom: 30px;
+}
+
+.media-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.media-item {
+    background: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.media-item:hover {
+    transform: translateY(-2px);
+}
+
+.media-button {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 20px;
+    font-size: 1.05rem;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.media-button:hover {
+    background: #222;
+}
+
+.media-icon {
+    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.media-icon.open {
+    transform: rotate(180deg);
+}
+
+.media-content-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.media-content-wrapper.open {
+    max-height: 100%;
+    padding: 20px;
+}
+
+.media-image {
+    max-width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    border: 2px dashed red;
+}
+
+.media-visit-button {
+    background-color: #2563eb;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.media-visit-button:hover {
+    background-color: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+    .media-button {
+        font-size: 1rem;
+        padding: 18px;
+    }
+
+    .media-visit-button {
+        font-size: 0.85rem;
+    }
+}
