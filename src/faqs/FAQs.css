@@ -1,12 +1,14 @@
+/* Container styling */
 .faq-container {
   max-width: 1100px;
   margin: auto;
-  padding: 40px;
+  padding: 40px 20px;
   text-align: center;
   color: white;
   background-color: #111;
 }
 
+/* Header */
 .faq-title {
   font-size: 2rem;
   font-weight: bold;
@@ -16,26 +18,38 @@
 .faq-subtitle {
   font-size: 1rem;
   color: #999;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
+/* FAQ List Wrapper */
 .faq-list {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
+/* Each FAQ Item */
 .faq-item {
   background: #1a1a1a;
   border-radius: 8px;
-  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   overflow: hidden;
+  transition: transform 0.2s ease;
 }
 
+/* Hover animation */
+.faq-item:hover {
+  transform: translateY(-2px);
+}
+
+/* Question Button */
 .faq-question {
   width: 100%;
   background: none;
   border: none;
-  padding: 15px;
-  font-size: 1rem;
+  padding: 20px;
+  font-size: 1.05rem;
   color: white;
   text-align: left;
   font-weight: bold;
@@ -43,47 +57,46 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  transition: background 0.2s ease;
 }
 
 .faq-question:hover {
   background: #222;
 }
 
+/* Toggle Icon */
 .faq-icon {
   transition: transform 0.3s ease;
+  font-size: 1.2rem;
 }
 
 .faq-icon.open {
   transform: rotate(180deg);
 }
 
-.faq-answer {
-  padding: 15px;
-  font-size: 0.9rem;
-  background: #222;
-  color: #ddd;
-  text-align: left;
-}
-
+/* Answer Section Wrapper with Animation */
 .faq-answer-wrapper {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 20px;
 }
 
 .faq-answer-wrapper.open {
-  max-height: 200px;
-  /* adjust according to expected content size */
+  max-height: 400px;
+  /* large enough to show full answer */
+  padding: 15px 20px;
 }
 
+/* Answer Text */
 .faq-answer {
-  padding: 15px;
-  font-size: 0.9rem;
-  background: #222;
+  font-size: 0.95rem;
   color: #ddd;
   text-align: left;
+  line-height: 1.6;
 }
 
+/* Red center line for debugging */
 .faq-center-line {
   position: fixed;
   top: 50%;
@@ -93,4 +106,21 @@
   background-color: red;
   z-index: 9999;
   pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-question {
+    font-size: 1rem;
+    padding: 18px;
+  }
+
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+
+  .faq-answer-wrapper.open {
+    max-height: 500px;
+    /* more space for longer answers */
+  }
 }
