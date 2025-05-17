@@ -1,0 +1,25 @@
+.blink {
+    animation: blinkAnimation 1s infinite;
+}
+
+@keyframes blinkAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Sticky alert below navbar */
+.sticky-alert {
+    position: sticky;
+    Top: 90%;
+    z-index: 1040;
+    /* Below navbar (Bootstrap navbar uses 1050) */
+}
