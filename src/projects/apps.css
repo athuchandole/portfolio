@@ -1,51 +1,45 @@
-
 .project-apps-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  /* background-color: #f4f4f4; */
-  /* min-height: 100vh; */
+  color: var(--text-color);
 }
 
 .app-img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-  }
-  
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
 .page-title {
   text-align: center;
-  color: #facc15;
+  color: var(--accent-color);
   margin-bottom: 30px;
   font-size: 2.5rem;
 }
 
-/* Grid Layout */
 .apps-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
-/* App Card */
 .app-card {
-  background-color: white;
+  background-color: var(--bg-color);
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px var(--shadow-color);
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .app-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px var(--shadow-color);
 }
 
-/* App Header */
 .app-header {
-    display: flex;
-    /* margin-bottom: 15px; */
-  }
+  display: flex;
+}
 
 .app-icon {
   font-size: 3rem;
@@ -58,30 +52,27 @@
 
 .app-name {
   font-size: 1.5rem;
-  color: #333;
+  color: var(--text-color);
   margin-top: 10px;
   margin-bottom: 5px;
 }
 
 .app-category {
-  color: #666;
+  color: var(--muted-color);
   font-size: 0.9rem;
 }
 
-/* App Description */
 .app-description {
-  color: #555;
+  color: var(--muted-color);
   margin-bottom: 15px;
 }
 
-/* App Footer */
 .app-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Star Rating */
 .stars {
   display: inline-block;
   margin-right: 10px;
@@ -92,11 +83,11 @@
 }
 
 .star.full {
-  color: #ffc107;
+  color: var(--star-color);
 }
 
 .star.half {
-  color: #ffc107;
+  color: var(--star-color);
   position: relative;
 }
 
@@ -114,13 +105,12 @@
 }
 
 .rating-text {
-  color: #666;
+  color: var(--muted-color);
   font-size: 0.9rem;
 }
 
-/* Button */
 .app-button {
-  background-color: #3498db;
+  background-color: var(--button-bg);
   color: white;
   border: none;
   padding: 8px 15px;
@@ -130,7 +120,7 @@
 }
 
 .app-button:hover {
-  background-color: #2980b9;
+  background-color: var(--button-hover);
 }
 
 /* Responsive Design */
@@ -156,7 +146,7 @@
   }
 }
 
-/* Custom Scrollbar */
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }

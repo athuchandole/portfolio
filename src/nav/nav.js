@@ -1,20 +1,16 @@
 // src/nav/nav.js
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './nav.css';  // Import the styles for the navbar
+import './nav.css';
 
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode, theme }) => {
   return (
-    <nav className="navbar">
-      <ul className="navbar-list">
-        <li className="navbar-item">
-          <Link to="/" className="navbar-link">Home</Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="/art" className="navbar-link">Arts</Link>
-        </li>
-        {/* Add more links as needed */}
-      </ul>
+    <nav className="navbar" style={{ backgroundColor: theme.navbar }}>
+      <div className="navbar-logo">
+        <img src="/logo192.png" alt="Logo" height="30" />
+      </div>
+      <button className="toggle-button" onClick={() => setDarkMode(!darkMode)}>
+        {darkMode ? "☀️" : "🌙"}
+      </button>
     </nav>
   );
 };

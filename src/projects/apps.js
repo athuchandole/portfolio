@@ -1,13 +1,12 @@
+// src/projects/apps.js
 import React from 'react';
 import './apps.css';
-
-// Import images
 import attendanceImg from '../assets/Projects/1.png';
 import codeCraftImg from '../assets/Projects/2.png';
 import webSphereImg from '../assets/Projects/2.png';
 import mobileSyncImg from '../assets/Projects/1.png';
 
-const ProjectApps = () => {
+const ProjectApps = ({ theme }) => {
   const projects = [
     {
       id: 1,
@@ -17,7 +16,7 @@ const ProjectApps = () => {
       category: 'In Java and xml',
       rating: 4.5,
       downloads: '10K+',
-      buttonType: 'Install'  // Set button type for this project
+      buttonType: 'Install'
     },
     {
       id: 2,
@@ -27,7 +26,7 @@ const ProjectApps = () => {
       category: 'Development',
       rating: 4.7,
       downloads: '50K+',
-      buttonType: 'View'  // Set button type for this project
+      buttonType: 'View'
     },
     {
       id: 3,
@@ -37,7 +36,7 @@ const ProjectApps = () => {
       category: 'Utilities',
       rating: 4.3,
       downloads: '25K+',
-      buttonType: 'Download'  // Set button type for this project
+      buttonType: 'Download'
     },
     {
       id: 4,
@@ -47,22 +46,22 @@ const ProjectApps = () => {
       category: 'Communication',
       rating: 4.6,
       downloads: '15K+',
-      buttonType: 'Install'  // Set button type for this project
+      buttonType: 'Install'
     }
   ];
 
   const renderStars = (rating) => {
     const fullStars = Math.floor(rating);
     const halfStar = rating % 1 >= 0.5;
-    
+
     return (
       <div className="stars">
         {[...Array(5)].map((_, index) => (
-          <span 
-            key={index} 
-            className={ 
-              index < fullStars ? 'star full' : 
-              (halfStar && index === fullStars) ? 'star half' : 'star empty'
+          <span
+            key={index}
+            className={
+              index < fullStars ? 'star full' :
+                (halfStar && index === fullStars) ? 'star half' : 'star empty'
             }
           >
             ★
@@ -73,9 +72,20 @@ const ProjectApps = () => {
   };
 
   return (
-    <div className="project-apps-container">
+    <div
+      className="project-apps-container"
+      style={{
+        '--bg-color': theme.cardBackground,
+        '--text-color': theme.text,
+        '--accent-color': theme.accent,
+        '--muted-color': theme.mutedText,
+        '--button-bg': theme.primary,
+        '--button-hover': theme.linkHover,
+        '--star-color': theme.warning,
+        '--shadow-color': theme.shadow
+      }}
+    >
       <h1 className="page-title">My Projects</h1>
-      
       <div className="apps-grid">
         {projects.map((app) => (
           <div key={app.id} className="app-card">
@@ -88,11 +98,11 @@ const ProjectApps = () => {
                 <p className="app-category">{app.category}</p>
               </div>
             </div>
-            
+
             <div className="app-description">
               <p>{app.description}</p>
             </div>
-            
+
             <div className="app-footer">
               <div className="app-rating">
                 {renderStars(app.rating)}
@@ -100,11 +110,8 @@ const ProjectApps = () => {
                   {app.rating} ({app.downloads})
                 </span>
               </div>
-              
               <button className="app-button">
-                {app.buttonType === 'Install' && 'Install'}
-                {app.buttonType === 'View' && 'View'}
-                {app.buttonType === 'Download' && 'Download'}
+                {app.buttonType}
               </button>
             </div>
           </div>

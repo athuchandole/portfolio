@@ -1,27 +1,21 @@
 /* src/nav/nav.css */
 .navbar {
-    background-color: #333;
-    padding: 10px;
-  }
-  
-  .navbar-list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar-item {
-    margin-right: 20px;
-  }
-  
-  .navbar-link {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .navbar-link:hover {
-    color: lightblue;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar-logo img {
+  height: 30px;
+}
+
+.toggle-button {
+  background-color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: inherit;
+  cursor: pointer;
+  font-weight: bold;
+}

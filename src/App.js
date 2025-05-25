@@ -1,14 +1,16 @@
 // src/App.js
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './App.css';
 
 import Navbar from './nav/nav';
-import UserPersona from './UserPersona/UserPersona'
+import { lightTheme, darkTheme } from './theme/colorPalette';
+
+import UserPersona from './UserPersona/UserPersona';
 import Hello from './hello/hello';
-import LogoCarousel from './logosc/LogoCarousel'
+import LogoCarousel from './logosc/LogoCarousel';
 import Hero from './Hero/Hero';
 import Alert from './Alert/Alert';
 import WhyThisPortfolio from './why/WhyThisPortfolio';
@@ -18,7 +20,6 @@ import TabsAndPills from "./tabandpills/TabsAndPills";
 import Youtubetwo from "./Youtubetwo/yt2";
 import GoogleSearch from './google/google';
 import Books from './books/Books';
-// import Brands from './brands/Brands';
 import ProjectApps from './projects/apps';
 import Footer from "./Footer/footer";
 import Art from './art/art';
@@ -26,10 +27,13 @@ import Arthero from './art/arthero/arthero';
 import SocialMedia from './SocialMedia/SocialMedia';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+  const theme = darkMode ? darkTheme : lightTheme;
+
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
+    <div className="App" style={{ background: theme.background, color: theme.text }}>
+      <Router>
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} theme={theme} />
         <Routes>
           <Route path="/art" element={
             <div className="artroute">
@@ -38,31 +42,25 @@ function App() {
               <Art />
             </div>
           } />
-
         </Routes>
 
-
-        {/* Route as per Github */}
         <div className="homeroute">
-          {/* <UserPersona /> */}
-          {/* <Hello /> */}
           <Alert />
           <Hero />
           <WhyThisPortfolio />
           <LogoCarousel />
-          <ProjectApps />
+          <ProjectApps theme={theme} />
           <Heighlights />
           <Books />
           <SocialMedia />
           <TabsAndPills />
           <Youtubetwo />
-          {/* <Brands /> */}
           <GoogleSearch />
           <FAQs />
           <Footer />
         </div>
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
 
