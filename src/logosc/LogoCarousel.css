@@ -1,0 +1,36 @@
+.carousel-container {
+    height: 100px;
+    background-color: #d2d2d2;
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    /* Add this */
+    align-items: center;
+    /* And this */
+}
+
+.carousel-track {
+    display: flex;
+    align-items: center;
+    /* Add this */
+    width: max-content;
+    animation: scrollLeft 30s linear infinite;
+}
+
+.carousel-logo {
+    height: 40px;
+    margin-right: 50px;
+    object-fit: contain;
+}
+
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}

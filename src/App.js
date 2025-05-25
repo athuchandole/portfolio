@@ -6,6 +6,9 @@ import "slick-carousel/slick/slick-theme.css";
 import './App.css';
 
 import Navbar from './nav/nav';
+import UserPersona from './UserPersona/UserPersona'
+import Hello from './hello/hello';
+import LogoCarousel from './logosc/LogoCarousel'
 import Hero from './Hero/Hero';
 import Alert from './Alert/Alert';
 import WhyThisPortfolio from './why/WhyThisPortfolio';
@@ -41,9 +44,12 @@ function App() {
 
         {/* Route as per Github */}
         <div className="homeroute">
+          {/* <UserPersona /> */}
+          {/* <Hello /> */}
           <Alert />
           <Hero />
           <WhyThisPortfolio />
+          <LogoCarousel />
           <ProjectApps />
           <Heighlights />
           <Books />

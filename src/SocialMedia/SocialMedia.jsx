@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import "./SocialMedia.css";
-import Twitter from "./imgs/x.png"
+import Twitter from "./imgs/x.png";
 
 const mediaData = [
     {
@@ -22,38 +22,6 @@ const mediaData = [
 
 const SocialMedia = () => {
     const [openIndex, setOpenIndex] = useState(null);
-    const itemRefs = useRef([]);
-
-    const handleScroll = () => {
-        const viewportCenter = window.innerHeight / 2;
-        let closestIndex = null;
-        let closestDistance = Infinity;
-
-        itemRefs.current.forEach((ref, index) => {
-            if (!ref) return;
-            const rect = ref.getBoundingClientRect();
-            const elementCenter = rect.top + rect.height / 2;
-            const distance = Math.abs(viewportCenter - elementCenter);
-
-            if (distance < closestDistance) {
-                closestDistance = distance;
-                closestIndex = index;
-            }
-        });
-
-        if (closestIndex !== openIndex) {
-            setOpenIndex(closestIndex);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll, { passive: true });
-        handleScroll(); // on mount
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, [openIndex]);
 
     return (
         <div className="media-container">
@@ -64,7 +32,6 @@ const SocialMedia = () => {
                     <div
                         key={index}
                         className="media-item"
-                        ref={(el) => (itemRefs.current[index] = el)}
                     >
                         <button
                             className="media-button"
