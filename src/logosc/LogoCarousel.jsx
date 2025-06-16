@@ -32,7 +32,7 @@ const LogoCarousel = ({ theme }) => {
     return (
         <div
             className="carousel-container"
-            style={{ backgroundColor: theme.section }}
+            style={{ backgroundColor: theme.cardbg }}
         >
             <div className="carousel-track">
                 {[...logos, ...logos].map((logo, index) => (

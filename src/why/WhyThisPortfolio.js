@@ -19,7 +19,7 @@ const WhyThisPortfolio = ({ theme }) => {
         <div className="col-text">
           <h1
             className="why_title p-2"
-            style={{ color: theme.warning }}
+            style={{ color: theme.h1 }}
           >
             Why This Portfolio?
           </h1>
