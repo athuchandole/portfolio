@@ -7,6 +7,7 @@ import './App.css';
 
 import Navbar from './nav/nav';
 import { lightTheme, darkTheme } from './theme/colorPalette';
+import FadeInGroup from './utils/FadeInGroup';
 
 import UserPersona from './UserPersona/UserPersona';
 import Hello from './hello/hello';
@@ -48,28 +49,32 @@ function App() {
             path="/art"
             element={
               <div className="artroute" style={{ backgroundColor: theme.cardBackground }}>
-                <Alert />
-                <Arthero />
-                <Art />
+                <FadeInGroup>
+                  <Alert />
+                  <Arthero />
+                  <Art />
+                </FadeInGroup>
               </div>
             }
           />
         </Routes>
 
         <div className="homeroute" style={{ backgroundColor: theme.background }}>
-          <Alert />
-          <Hero theme={theme} />
-          <WhyThisPortfolio theme={theme} />
-          <LogoCarousel theme={theme}/>
-          <ProjectApps theme={theme} />
-          <Heighlights />
-          <Books />
-          <SocialMedia />
-          <TabsAndPills />
-          <Youtubetwo />
-          <GoogleSearch />
-          <FAQs theme={theme} />
-          <Footer />
+          <FadeInGroup>
+            <Alert />
+            <Hero theme={theme} />
+            <WhyThisPortfolio theme={theme} />
+            <LogoCarousel theme={theme} />
+            <ProjectApps theme={theme} />
+            <Heighlights />
+            <Books />
+            <SocialMedia />
+            <TabsAndPills />
+            <Youtubetwo />
+            <GoogleSearch />
+            <FAQs theme={theme} />
+            <Footer />
+          </FadeInGroup>
         </div>
       </Router>
     </div>
