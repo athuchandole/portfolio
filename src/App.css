@@ -1,14 +1,20 @@
 /* src/App.css */
-.homeroute {
-  background-color: #232223;
+
+body {
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
   font-family: 'Roboto', sans-serif;
-  /* border: 2px dashed red; */
+  padding-top: 60px;
+}
+
+.homeroute {
+  transition: background-color 0.3s ease;
 }
 
 .artroute {
-  background-color: #f1f1f1
+  transition: background-color 0.3s ease;
 }
-
 
 h1 {
   font-family: 'Google Sans', 'Roboto', sans-serif;
@@ -19,7 +25,8 @@ h1 {
   font-weight: 500;
   font-size: 22px;
   line-height: 28px;
-  color: #202124;
+  color: inherit;
+  /* use theme color */
 }
 
 .projectfont2 {
@@ -27,5 +34,6 @@ h1 {
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  color: #5f6368;
+  color: inherit;
+  /* use theme color */
 }

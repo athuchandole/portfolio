@@ -1,19 +1,17 @@
+/* src/components/LogoCarousel.css */
 .carousel-container {
     height: 100px;
-    background-color: #d2d2d2;
     overflow: hidden;
     position: relative;
 
     display: flex;
-    /* Add this */
     align-items: center;
-    /* And this */
+    padding: 0 20px;
 }
 
 .carousel-track {
     display: flex;
     align-items: center;
-    /* Add this */
     width: max-content;
     animation: scrollLeft 30s linear infinite;
 }
@@ -22,8 +20,12 @@
     height: 40px;
     margin-right: 50px;
     object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
+.carousel-logo:hover {
+    transform: scale(1.1);
+}
 
 @keyframes scrollLeft {
     0% {

@@ -28,13 +28,20 @@ const logos = [
     'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg',
 ];
 
-
-const LogoCarousel = () => {
+const LogoCarousel = ({ theme }) => {
     return (
-        <div className="carousel-container">
+        <div
+            className="carousel-container"
+            style={{ backgroundColor: theme.section }}
+        >
             <div className="carousel-track">
                 {[...logos, ...logos].map((logo, index) => (
-                    <img key={index} src={logo} alt={`logo-${index}`} className="carousel-logo" />
+                    <img
+                        key={index}
+                        src={logo}
+                        alt={`logo-${index}`}
+                        className="carousel-logo"
+                    />
                 ))}
             </div>
         </div>

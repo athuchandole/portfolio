@@ -1,9 +1,8 @@
-// src/why/WhyThisPortfolio.js
 import React from "react";
-import './WhyThisPortfolio.css';  // Import the external CSS file
-import image from '../assets/img.jpg'; // Import the image from assets folder
+import './WhyThisPortfolio.css';
+import image from '../assets/img.jpg';
 
-const WhyThisPortfolio = () => {
+const WhyThisPortfolio = ({ theme }) => {
   return (
     <div className="container">
       <div className="row">
@@ -15,30 +14,38 @@ const WhyThisPortfolio = () => {
             className="portfolio-img"
           />
         </div>
-        
+
         {/* Text Content Section */}
         <div className="col-text">
-          <h1 className="why_title p-2">Why This Portfolio?</h1>
-          <div className="pbg">
-            <i className="fa fa-check-circle text-info"></i>
-            To <strong className="text-uppercase"> SHOWCASE </strong> expertise and skills.
-          </div>
-          <div className="pbg">
-            <i className="fa fa-check-circle text-info"></i>
-            To <strong className="text-uppercase"> Attract </strong> potential clients and opportunities.
-          </div>
-          <div className="pbg">
-            <i className="fa fa-check-circle text-info"></i>
-            To <strong className="text-uppercase"> Demonstrate </strong> creativity and innovation.
-          </div>
-          <div className="pbg">
-            <i className="fa fa-check-circle text-info"></i>
-            To <strong className="text-uppercase"> Foster </strong> continuous growth and improvement.
-          </div>
-          <div className="pbg">
-            <i className="fa fa-check-circle text-info"></i>
-            To <strong className="text-uppercase"> Establish </strong> professional credibility.
-          </div>
+          <h1
+            className="why_title p-2"
+            style={{ color: theme.warning }}
+          >
+            Why This Portfolio?
+          </h1>
+
+          {[
+            "SHOWCASE expertise and skills.",
+            "ATTRACT potential clients and opportunities.",
+            "DEMONSTRATE creativity and innovation.",
+            "FOSTER continuous growth and improvement.",
+            "ESTABLISH professional credibility.",
+          ].map((text, i) => (
+            <div
+              key={i}
+              className="pbg"
+              style={{
+                backgroundColor: theme.highlight,
+                color: theme.text,
+              }}
+            >
+              <i
+                className="fa fa-check-circle"
+                style={{ color: theme.info, marginRight: "10px" }}
+              ></i>
+              To <strong className="text-uppercase">{text}</strong>
+            </div>
+          ))}
         </div>
       </div>
     </div>

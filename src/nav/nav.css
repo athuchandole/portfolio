@@ -1,9 +1,17 @@
-/* src/nav/nav.css */
 .navbar {
+  position: fixed;
+  /* Fixes navbar at top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  /* Makes sure it stays above other elements */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  /* Optional: adds subtle shadow */
 }
 
 .navbar-logo img {

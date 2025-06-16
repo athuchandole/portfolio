@@ -1,6 +1,7 @@
 // src/nav/nav.js
 import React from 'react';
 import './nav.css';
+import ToggleBtn from '../components/ToggleBtn';
 
 const Navbar = ({ darkMode, setDarkMode, theme }) => {
   return (
@@ -8,9 +9,7 @@ const Navbar = ({ darkMode, setDarkMode, theme }) => {
       <div className="navbar-logo">
         <img src="/logo192.png" alt="Logo" height="30" />
       </div>
-      <button className="toggle-button" onClick={() => setDarkMode(!darkMode)}>
-        {darkMode ? "☀️" : "🌙"}
-      </button>
+      <ToggleBtn darkMode={darkMode} setDarkMode={setDarkMode} />
     </nav>
   );
 };

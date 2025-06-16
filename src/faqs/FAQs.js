@@ -19,7 +19,7 @@ const faqData = [
   }
 ];
 
-const FAQs = () => {
+const FAQs = ({ theme }) => {
   const [openIndex, setOpenIndex] = useState(null);
   const itemRefs = useRef([]);
 
@@ -33,14 +33,12 @@ const FAQs = () => {
       const rect = ref.getBoundingClientRect();
       const elementCenter = rect.top + rect.height / 2;
       const distance = Math.abs(viewportCenter - elementCenter);
-
       if (distance < closestDistance) {
         closestDistance = distance;
         closestIndex = index;
       }
     });
 
-    // Only update if the closest one isn't already open
     if (closestIndex !== openIndex) {
       setOpenIndex(closestIndex);
     }
@@ -48,48 +46,57 @@ const FAQs = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // trigger on mount
-
+    handleScroll();
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [openIndex]);
 
   return (
-    <>
-      {/* Red Line For Testing */}
-      {/* <div className="faq-center-line"></div> */}
-      <div className="faq-container">
-        <h2 className="faq-title">FAQs</h2>
-        <p className="faq-subtitle">Curious minds, we've got you covered</p>
-        <div className="faq-list">
-          {faqData.map((item, index) => (
-            <div
-              key={index}
-              className="faq-item"
-              ref={(el) => (itemRefs.current[index] = el)}
+    <div
+      className="faq-container"
+      style={{ color: theme.text, backgroundColor: theme.background }}
+    >
+      <h2 className="faq-title" style={{ color: theme.warning }}>FAQs</h2>
+      <p className="faq-subtitle" style={{ color: theme.subtext }}>
+        Curious minds, we've got you covered
+      </p>
+      <div className="faq-list">
+        {faqData.map((item, index) => (
+          <div
+            key={index}
+            className="faq-item"
+            ref={(el) => (itemRefs.current[index] = el)}
+            style={{
+              background: theme.card,
+              boxShadow: `0 2px 5px ${theme.shadow}`
+            }}
+          >
+            <button
+              className="faq-question"
+              onClick={() =>
+                setOpenIndex((prev) => (prev === index ? null : index))
+              }
+              style={{ color: theme.text }}
             >
-              <button
-                className="faq-question"
-                onClick={() =>
-                  setOpenIndex((prev) => (prev === index ? null : index))
-                }
+              {item.question}
+              <span
+                className={`faq-icon ${openIndex === index ? "open" : ""}`}
               >
-                {item.question}
-                <span className={`faq-icon ${openIndex === index ? "open" : ""}`}>
-                  ▼
-                </span>
-              </button>
-              <div
-                className={`faq-answer-wrapper ${openIndex === index ? "open" : ""}`}
-              >
-                <p className="faq-answer">{item.answer}</p>
-              </div>
+                ▼
+              </span>
+            </button>
+            <div
+              className={`faq-answer-wrapper ${openIndex === index ? "open" : ""}`}
+            >
+              <p className="faq-answer" style={{ color: theme.subtext }}>
+                {item.answer}
+              </p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 

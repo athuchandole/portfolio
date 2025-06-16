@@ -31,24 +31,36 @@ function App() {
   const theme = darkMode ? darkTheme : lightTheme;
 
   return (
-    <div className="App" style={{ background: theme.background, color: theme.text }}>
+    <div
+      className="App"
+      style={{
+        backgroundColor: theme.background,
+        color: theme.text,
+        minHeight: "100vh",
+        transition: "all 0.3s ease"
+      }}
+    >
       <Router>
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} theme={theme} />
+
         <Routes>
-          <Route path="/art" element={
-            <div className="artroute">
-              <Alert />
-              <Arthero />
-              <Art />
-            </div>
-          } />
+          <Route
+            path="/art"
+            element={
+              <div className="artroute" style={{ backgroundColor: theme.cardBackground }}>
+                <Alert />
+                <Arthero />
+                <Art />
+              </div>
+            }
+          />
         </Routes>
 
-        <div className="homeroute">
+        <div className="homeroute" style={{ backgroundColor: theme.background }}>
           <Alert />
-          <Hero />
-          <WhyThisPortfolio />
-          <LogoCarousel />
+          <Hero theme={theme} />
+          <WhyThisPortfolio theme={theme} />
+          <LogoCarousel theme={theme}/>
           <ProjectApps theme={theme} />
           <Heighlights />
           <Books />
@@ -56,7 +68,7 @@ function App() {
           <TabsAndPills />
           <Youtubetwo />
           <GoogleSearch />
-          <FAQs />
+          <FAQs theme={theme} />
           <Footer />
         </div>
       </Router>
