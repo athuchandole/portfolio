@@ -18,7 +18,7 @@ const StupidBox = () => {
         <input 
           className="toggle-input" 
           type="checkbox" 
-          checked={isOn} 
+          checked={isOn}
           onChange={() => setIsOn(!isOn)} 
         />
         <div className="toggle-handle-wrapper">

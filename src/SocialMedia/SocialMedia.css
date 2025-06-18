@@ -83,7 +83,7 @@
 }
 
 .media-image {
-    max-width: 100%;
+    max-width: 40%;
     height: 100%;
     margin-bottom: 10px;
 }
@@ -104,6 +104,12 @@
 }
 
 @media (max-width: 768px) {
+
+    .media-image {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
     .media-button {
         font-size: 1rem;
         padding: 18px;

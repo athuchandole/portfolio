@@ -28,7 +28,7 @@ import Arthero from './art/arthero/arthero';
 import SocialMedia from './SocialMedia/SocialMedia';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const theme = darkMode ? darkTheme : lightTheme;
 
   return (
@@ -66,7 +66,7 @@ function App() {
             <WhyThisPortfolio theme={theme} />
             <LogoCarousel theme={theme} />
             <ProjectApps theme={theme} />
-            <Heighlights />
+            {/* <Heighlights /> */}
             <Books />
             <SocialMedia />
             <TabsAndPills />

@@ -1,22 +1,32 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import "./SocialMedia.css";
 import Twitter from "./imgs/x.png";
+import SocialButton from "../components/SocialButton";
+
+// Import actual icons
+import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 
 const mediaData = [
     {
         media: "LinkedIn",
         image: Twitter,
-        link: "https://www.linkedin.com/"
+        link: "https://www.linkedin.com/",
+        icon: FaLinkedin,
+        color: "#0077B5"
     },
     {
         media: "Twitter",
         image: Twitter,
-        link: "https://twitter.com/"
+        link: "https://twitter.com/",
+        icon: FaTwitter,
+        color: "#1DA1F2"
     },
     {
         media: "GitHub",
         image: Twitter,
-        link: "https://github.com/"
+        link: "https://github.com/",
+        icon: FaGithub,
+        color: "#333"
     }
 ];
 
@@ -29,10 +39,7 @@ const SocialMedia = () => {
             <p className="media-subtitle">Stay connected on your favorite platforms</p>
             <div className="media-list">
                 {mediaData.map((item, index) => (
-                    <div
-                        key={index}
-                        className="media-item"
-                    >
+                    <div key={index} className="media-item">
                         <button
                             className="media-button"
                             onClick={() =>
@@ -44,13 +51,14 @@ const SocialMedia = () => {
                                 ▼
                             </span>
                         </button>
-                        <div
-                            className={`media-content-wrapper ${openIndex === index ? "open" : ""}`}
-                        >
+                        <div className={`media-content-wrapper ${openIndex === index ? "open" : ""}`}>
                             <img src={item.image} alt={item.media} className="media-image" />
-                            <a href={item.link} target="_blank" rel="noopener noreferrer">
-                                <button className="media-visit-button">Visit</button>
-                            </a>
+                            <SocialButton
+                                icon={item.icon}
+                                name={item.media}
+                                url={item.link}
+                                color={item.color}
+                            />
                         </div>
                     </div>
                 ))}
