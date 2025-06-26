@@ -1,6 +1,6 @@
 // src/App.js
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './App.css';
@@ -45,6 +45,10 @@ function App() {
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} theme={theme} />
 
         <Routes>
+          {/* Redirect root to /portfolio */}
+          <Route path="/" element={<Navigate to="/portfolio" replace />} />
+
+          {/* /art route */}
           <Route
             path="/art"
             element={
@@ -57,25 +61,41 @@ function App() {
               </div>
             }
           />
-        </Routes>
 
-        <div className="homeroute" style={{ backgroundColor: theme.background }}>
-          <FadeInGroup>
-            <Alert />
-            <Hero theme={theme} />
-            <WhyThisPortfolio theme={theme} />
-            <LogoCarousel theme={theme} />
-            <ProjectApps theme={theme} />
-            {/* <Heighlights /> */}
-            <Books />
-            <SocialMedia />
-            <TabsAndPills />
-            <Youtubetwo />
-            <GoogleSearch />
-            <FAQs theme={theme} />
-            <Footer />
-          </FadeInGroup>
-        </div>
+          {/* /projects route */}
+          <Route
+            path="/projects"
+            element={
+              <div className="projectroute" style={{ backgroundColor: theme.background }}>
+                <ProjectApps theme={theme} />
+              </div>
+            }
+          />
+
+          {/* /portfolio route (homepage) */}
+          <Route
+            path="/portfolio"
+            element={
+              <div className="homeroute" style={{ backgroundColor: theme.background }}>
+                <FadeInGroup>
+                  <Alert />
+                  <Hero theme={theme} />
+                  <WhyThisPortfolio theme={theme} />
+                  <LogoCarousel theme={theme} />
+                  <ProjectApps theme={theme} />
+                  {/* <Heighlights /> */}
+                  <Books />
+                  <SocialMedia />
+                  <TabsAndPills />
+                  <Youtubetwo />
+                  <GoogleSearch />
+                  <FAQs theme={theme} />
+                  <Footer />
+                </FadeInGroup>
+              </div>
+            }
+          />
+        </Routes>
       </Router>
     </div>
   );

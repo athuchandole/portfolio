@@ -1,8 +1,8 @@
 // src/projects/apps.js
 import React from 'react';
 import './apps.css';
-import attendanceImg from '../assets/Projects/1.png';
-import codeCraftImg from '../assets/Projects/2.png';
+import attendanceImg from '../assets/Projects/bg.png';
+import codeCraftImg from '../assets/Projects/bg.png';
 import webSphereImg from '../assets/Projects/2.png';
 import mobileSyncImg from '../assets/Projects/1.png';
 
@@ -10,66 +10,51 @@ const ProjectApps = ({ theme }) => {
   const projects = [
     {
       id: 1,
-      name: 'Attendance Application',
-      description: 'Powerful task management application',
+      name: 'Bhagavd Geeta App',
+      description: 'Developed a cross-platform mobile app using React Native to explore verses from the Bhagavad Gita. Integrated RapidAPI to fetch chapter-wise and verse-wise data dynamically. Key features included:',
       icon: attendanceImg,
-      category: 'In Java and xml',
-      rating: 4.5,
-      downloads: '10K+',
-      buttonType: 'Install'
+      category: 'React Native',
+      features: [
+        '🌓 Theme support: Light and dark modes using Context',
+        '🌐 Multi-language support: Display verses in multiple Indian languages',
+        '🛠️ State management: React hooks and Context for efficient data handling',
+        '🔁 Translations & commentary: Fetched from API with smooth toggle UI',
+        '🧭 Navigation: React Navigation for seamless screen transitions'
+      ],
+      buttonType: 'Install',
+      link: 'https://drive.google.com/file/d/1VlVCxKkFmTU9Y6OphEmyizLERug4D-vW/view?usp=drive_link'
     },
     {
       id: 2,
-      name: 'CodeCraft',
+      name: 'Bhagavd Geeta Web',
       description: 'Advanced code editor for developers',
       icon: codeCraftImg,
-      category: 'Development',
-      rating: 4.7,
-      downloads: '50K+',
-      buttonType: 'View'
+      category: 'React Js',
+      features: ['Theme', 'Live preview', 'Clean UI'],
+      buttonType: 'View',
+      link: 'https://instagram.com/codecraft'
     },
     {
       id: 3,
-      name: 'WebSphere',
+      name: 'Attendance App',
       description: 'Comprehensive web browsing experience',
       icon: webSphereImg,
-      category: 'Utilities',
-      rating: 4.3,
-      downloads: '25K+',
-      buttonType: 'Download'
+      category: 'Java & XML',
+      features: ['Multi-tab', 'Private mode', 'Bookmark manager'],
+      buttonType: 'Download',
+      link: 'https://athuchandole.github.io/Geeta/'
     },
     {
       id: 4,
-      name: 'MobileSync',
+      name: 'Digital Menu',
       description: 'Cross-platform mobile synchronization tool',
       icon: mobileSyncImg,
-      category: 'Communication',
-      rating: 4.6,
-      downloads: '15K+',
-      buttonType: 'Install'
+      category: 'PHP',
+      features: ['Order Menu', 'cart', 'Order List'],
+      buttonType: 'View',
+      link: 'https://athuchandole.github.io/Geeta/',
     }
   ];
-
-  const renderStars = (rating) => {
-    const fullStars = Math.floor(rating);
-    const halfStar = rating % 1 >= 0.5;
-
-    return (
-      <div className="stars">
-        {[...Array(5)].map((_, index) => (
-          <span
-            key={index}
-            className={
-              index < fullStars ? 'star full' :
-                (halfStar && index === fullStars) ? 'star half' : 'star empty'
-            }
-          >
-            ★
-          </span>
-        ))}
-      </div>
-    );
-  };
 
   return (
     <div
@@ -101,18 +86,24 @@ const ProjectApps = ({ theme }) => {
 
             <div className="app-description">
               <p>{app.description}</p>
+              <ul className="app-features">
+                {app.features.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
+              </ul>
             </div>
 
             <div className="app-footer">
-              <div className="app-rating">
-                {renderStars(app.rating)}
-                <span className="rating-text">
-                  {app.rating} ({app.downloads})
-                </span>
-              </div>
-              <button className="app-button">
-                {app.buttonType}
-              </button>
+              <a
+                href={app.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="app-button-link"
+              >
+                <button className="app-button">
+                  {app.buttonType}
+                </button>
+              </a>
             </div>
           </div>
         ))}

@@ -14,13 +14,15 @@
 .page-title {
   text-align: center;
   color: var(--accent-color);
+  margin-top: 50px;
   margin-bottom: 30px;
   font-size: 2.5rem;
 }
 
 .apps-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  /* 👈 2 cards per row for PC */
   gap: 20px;
 }
 
@@ -57,6 +59,10 @@
   margin-bottom: 5px;
 }
 
+.app-button-link {
+  text-decoration: none;
+}
+
 .app-category {
   color: var(--muted-color);
   font-size: 0.9rem;
@@ -73,39 +79,14 @@
   align-items: center;
 }
 
-.stars {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.star {
-  font-size: 1.2rem;
-}
-
-.star.full {
-  color: var(--star-color);
-}
-
-.star.half {
-  color: var(--star-color);
-  position: relative;
-}
-
-.star.half::after {
-  content: '★';
-  position: absolute;
-  left: 0;
-  width: 50%;
-  overflow: hidden;
-  color: gray;
-}
-
-.star.empty {
-  color: #ddd;
-}
-
-.rating-text {
+.app-features {
+  margin: 10px 0 0;
+  padding-left: 20px;
   color: var(--muted-color);
+}
+
+.app-features li {
+  list-style-type: disc;
   font-size: 0.9rem;
 }
 
@@ -124,12 +105,6 @@
 }
 
 /* Responsive Design */
-@media screen and (max-width: 1200px) {
-  .apps-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media screen and (max-width: 900px) {
   .apps-grid {
     grid-template-columns: repeat(2, 1fr);
